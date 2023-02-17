@@ -23,23 +23,5 @@ export const HeaderNav: React.FC = () => (
     >
       Phones
     </NavLink>
-    <NavLink
-      to="/Tablets"
-      className={({
-        isActive,
-      }) => classNames('header-navigation__link',
-        { 'header-navigation__link--active': isActive })}
-    >
-      Tablets
-    </NavLink>
-    <NavLink
-      to="/Accessories"
-      className={({
-        isActive,
-      }) => classNames('header-navigation__link',
-        { 'header-navigation__link--active': isActive })}
-    >
-      Accessories
-    </NavLink>
   </nav>
 );
