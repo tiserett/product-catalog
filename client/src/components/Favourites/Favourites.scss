@@ -1,0 +1,57 @@
+@import '../../styles/main.scss';
+
+.favourites {
+  max-width: 1200px;
+  margin-bottom: 80px;
+
+  &__logo {
+    display: flex;
+    margin-bottom: 40px;
+
+    &-home {
+      @include height-width(16px, 16px);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../../../public/images/Home.png);
+      margin-right: 15px;
+    }
+
+    &-vector {
+      @include height-width(16px, 16px);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../../../public/images/Vector.png);
+      margin-right: 15px;
+
+      &-text {
+        @include font-style($fw-700, $fs-12, 15px, $color-secondary);
+        font-family: $ff-mont;
+        text-align: center;
+      }
+    }
+  }
+  &__title {
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    font-family: $ff-mont;
+    &-text {
+      @include font-style($fw-800, $fs-48, 56px);
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      font-family: $ff-mont;
+    }
+  }
+
+  &__count {
+    @include font-style($fw-700, $fs-12, 15px, $color-secondary);
+    font-family: $ff-mont;
+    margin-bottom: 40px;
+  }
+
+  &__phone {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

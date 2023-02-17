@@ -1,0 +1,56 @@
+// colors
+$color-primary: #161827;
+$color-white: #f1f2f9;
+$color-secondary: #75767f;
+$color-icons: #4a4d58;
+$color-elements: #3b3e4a;
+$color-surface-1: #161827;
+$color-surface-2: #323542;
+$color-black: #0f1121;
+$color-accent: #905bff;
+$color-accent-2: #a378ff;
+$color-green: #27ae60;
+$color-red: #eb5757;
+
+//fonts
+$ff-mont: "Mont", sans-serif;
+
+$fs-48: 3rem;
+$fs-32: 2rem;
+$fs-22: 1.38rem;
+$fs-20: 1.25rem;
+$fs-16: 1rem;
+$fs-14: 0.88rem;
+$fs-12: 0.75rem;
+
+$fw-400: 400;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+
+//grid & breakpoints
+$mobile-columns: 4;
+$pad-columns: 12;
+$desktop-columns: 24;
+$grid-column-gap: 16px;
+$grid-row-gap: 60px;
+
+$burger-media-width: 768px;
+$mobile-media-width: 320px;
+$pad-media-width: 640px;
+$desktop-media-width: 1200px;
+
+$mobile-grid-columns: $mobile-columns;
+$mobile-grid-column-width: repeat($mobile-columns, minmax(60px, 1fr));
+$mobile-grid-gap: $grid-column-gap;
+
+$pad-grid-columns: $pad-columns;
+$pad-grid-column-width: repeat($pad-columns, minmax(34px, 81px));
+$pad-grid-gap: $grid-column-gap;
+
+$desktop-grid-columns: $desktop-columns;
+$desktop-grid-column-width: repeat($desktop-columns, 32px);
+$desktop-grid-gap: $grid-column-gap;
+
+//transition
+$transition-time: 0.3s;

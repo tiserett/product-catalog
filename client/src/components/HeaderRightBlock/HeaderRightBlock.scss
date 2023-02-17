@@ -1,0 +1,39 @@
+@import "../../styles/main.scss";
+
+.header {
+  &__header-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include phoneSpecial {
+      display: none;
+    }
+  }
+
+  &__header-right-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid $color-elements;
+    transition: all $transition-time;
+
+    &:hover {
+      border-bottom: 2px solid $color-white;
+    }
+
+    &-liked {
+      background-image: url(../../images/icons/heart.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &-shoping {
+      background-image: url(../../images/icons/cart.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

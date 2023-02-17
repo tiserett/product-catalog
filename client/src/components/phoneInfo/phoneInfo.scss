@@ -1,0 +1,499 @@
+@import '../../styles/main.scss';
+
+.phone-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+
+  &__logo {
+   display: flex;
+   margin-bottom: 40px;
+
+   &-home {
+    @include height-width(16px, 16px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../public/images/Home.png);
+    margin-right: 15px;
+   }
+
+   &-vector {
+    @include height-width(16px, 16px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../public/images/Vector.png);
+    margin-right: 15px;
+    margin-left: 15px;
+   }
+   &-link {
+    
+    @include font-style($fw-700, $fs-12, 15px, $color-secondary);
+    font-family: $ff-mont;
+    color: $color-white;
+   }
+
+    &-text {
+      @include font-style($fw-700, $fs-12, 15px, $color-secondary);
+      font-family: $ff-mont;
+    }
+  }
+
+  &__title {
+    @include font-style($fw-800, $fs-48, 56px);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    font-family: $ff-mont;
+  }
+}
+
+.back__btn {
+  display: flex;
+  &-vector {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../public/images/Vector_back.png);
+    margin-right: 15px;
+  }
+  &-link {
+    @include font-style($fw-700, $fs-12, 15px, $color-white,);
+    font-family: $ff-mont;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.phone {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  &__title {
+    font-weight: $fw-800;
+    font-size: $fs-22;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    color: $color-white;
+    margin-bottom: 32px;
+    font-family: $ff-mont;
+
+    @include pad {
+      font-size: $fs-32;
+      line-height: 40px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 80px;
+    margin-bottom: 90px;
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include pad {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 30px;
+      width: 100%;
+    }
+  }
+
+  &__chose-color {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 32px;
+
+    &-text {
+      font-weight: $fw-700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      color: $color-secondary;
+      margin-bottom: 16px;
+      font-family: $ff-mont;
+    }
+    &-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $color-secondary;
+      @include phone {
+        margin-right: 8px;
+      }
+      @include desktop {
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-item {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $color-secondary;
+      @include phone {
+        margin-right: 8px;
+      }
+      @include desktop {
+        margin-right: 16px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &-active {
+        background-color: $color-secondary;
+      }
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      max-width: 2500px;
+      
+    }
+  }
+  &__chose-capacity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    &-text {
+      font-weight: $fw-700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      color: $color-secondary;
+      margin-bottom: 16px;
+      font-family: $ff-mont;
+    }
+    &-btn {
+      width: 60px;
+      height: 32px;
+      color: $color-white;
+      background-color: $color-black;
+      border: 1px solid $color-secondary;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-item {
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+      margin-left: 22px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &-active {
+        background-color: $color-white;
+      }
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    @include phone {
+      margin-bottom: 40px;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    @include pad {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__functional {
+    display: flex;
+    flex-direction: column;
+
+    @include phone {
+      margin-left: 0;
+      width: 288px;
+    }
+
+    @include pad {
+      width: 237px;
+    }
+    @include desktop {
+      margin-left: 30px;
+      width: 100%;
+    }
+    
+  }
+
+  &__image {
+    width: 442px;
+    height: 442px;
+    object-fit: contain;
+    @include phone {
+      width: 274px;
+      height: 274px;
+    }
+
+    @include desktop {
+      width: 442px;
+      height: 442px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e2e6e9;
+    box-sizing: border-box;
+    padding: 8px;
+    &--focus {
+      border: 1px solid #313237;
+    }
+    @include phone {
+      width: 50px;
+      height: 50px;
+    }
+    @include pad {
+      width: 29px;
+      height: 29px;
+    }
+    @include desktop {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__cart {
+    background-color: #313237;
+    height: 48px;
+    width: 263px;
+    padding: 0;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    margin-right: 0;
+
+    &:hover {
+      box-shadow: 0 3px 13px rgba(23, 32, 49, 0.26);
+    }
+
+    &--focus {
+      border: 1px solid #e2e6e9;
+      color: #27ae60;
+      background-color: #fff;
+    }
+  }
+
+  &__price {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-family: $ff-mont;
+  }
+
+  &__newPrice {
+    font-family: "Mont", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    color: $color-white;
+    margin: 0;
+    font-family: $ff-mont;
+  }
+
+  &__oldPrice {
+    font-family: "Mont", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    text-decoration-line: line-through;
+    color: #89939a;
+    margin: 0;
+    font-family: $ff-mont;
+  }
+
+  &__characteristic {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: $ff-mont;
+  }
+
+  &__name {
+    color: $color-secondary;
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  &__value {
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    gap: 64px;
+    margin-top: 80px;
+
+    @include phone {
+      flex-direction: column;
+      gap: 0;
+      margin-top: 0;
+    }
+    @include pad {
+      flex-direction: column;
+      gap: 0;
+    }
+    @include desktop {
+      flex-direction: row;
+      gap: 64px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    font-family: $ff-mont;
+    color: $color-white;
+    width: 560px;
+    @include phone {
+      width: 100%;
+    }
+    @include pad {
+      width: 100%;
+    }
+    @include desktop {
+      width: 560px;
+    }
+
+    &--title {
+      font-weight: $fw-700;
+      font-size: $fs-20;
+      color: $color-white;
+      margin-bottom: 16px;
+    }
+    &--text {
+      font-weight: $fw-400;
+      font-size: $fs-16;
+      line-height: 24px;
+      margin-bottom: 16px;
+      color: $color-secondary;
+    }
+  }
+
+  &__specs {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    @include phone {
+      width: 100%;
+    }
+    @include pad {
+      width: 100%;
+    }
+
+    &--line {
+      width: 512px;
+    }
+  }
+
+  &__line {
+    border: 1px solid #3B3E4A;
+    width: 560px;
+    margin-bottom: 32px;
+    @include phone {
+      width: 100%;
+    }
+    @include desktop {
+      width: 560px;
+    }
+  }
+  &__line--min {
+    width: 320px;
+    margin-bottom: 32px;
+    border: 1px solid #3B3E4A;
+    
+    @include phone {
+      width: 100%;
+    }
+    @include pad {
+      width: 100%;
+    }
+  }
+
+  &__line--middle {
+    width: 480px;
+    margin-bottom: 32px;
+    border: 1px solid #3B3E4A;
+
+    @include phone {
+      width: 100%;
+    }
+    @include pad {
+      width: 100%;
+    }
+
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-family: $ff-mont;
+    color: $color-white;
+  }
+}
+
+.image__container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  @include phone {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    
+  }
+  @include pad {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: column;
+  }
+  /* &--big {
+    width: 100%;
+    height: 442px;
+    margin-right: 76px;
+    object-fit: contain;
+    margin: 0 auto;
+  } */
+}

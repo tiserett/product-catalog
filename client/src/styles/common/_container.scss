@@ -1,0 +1,32 @@
+@import '../utils';
+
+.container {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include pad {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 32px;
+  }
+}
+
+.logo {
+  @include font-style($fw-600, $fs-20, 20px);
+  text-transform: uppercase;
+
+  @include phoneSpecial {
+    font-size: $fs-16;
+  }
+
+  &__icon {
+    padding: 10px;
+    background-image: url(../../images/icons/heart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

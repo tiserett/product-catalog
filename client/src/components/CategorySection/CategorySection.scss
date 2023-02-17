@@ -1,0 +1,64 @@
+@import '../../styles/main.scss';
+
+.section-category {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    @include desktop {
+      @include hover(color, $color-accent-2);
+    }
+  }
+
+  &__baner-wrap {
+    @include pad {
+      display: flex;
+    }
+  }
+
+  &__baner {
+    flex: 1 0 31%;
+    margin-bottom: 32px;
+
+    @include pad {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 288px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 24px;
+    @include hover(scale, 103%);
+    cursor: pointer;
+
+    @include pad {
+      height: 187px;
+    }
+
+    @include desktop {
+      height: 368px;
+    }
+
+    &--phones {
+      background-image: url(../../images/img/phones.jpg);
+    }
+
+    &--tablets {
+      background-image: url(../../images/img/tablets.jpg);
+    }
+
+    &--accessories {
+      background-image: url(../../images/img/accessories.jpg);
+    }
+  }
+
+  &__product-count {
+    @include font-style($fw-600, $fs-14, 21px, $color-secondary);
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/main.scss';
+
+.mainContent {
+  min-height: calc(100vh - 334px);
+
+  @include pad {
+    min-height: calc(100vh - 189px);
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../styles/main.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include height-width(439px, 212px);
+  background-color: $color-surface-1;
+
+  @include pad {
+    @include height-width(512px, 237px);
+  }
+
+  @include desktop {
+    @include height-width(506px, 272px);
+  }
+
+  &__img {
+    @include height-width(208px, 140px);
+    margin-top: 32px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    object-fit: fill;
+    @include hover(scale, 105%);
+
+    @include mobile {
+      @include height-width(129px, 115px);
+    }
+  }
+
+  &__description-content {
+    padding: 0 31px 32px;
+  }
+
+  &__product-title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    min-height: 42px;
+    margin-bottom: 8px;
+    @include font-style($fw-600, $fs-14, 21px);
+  }
+
+  &__price {
+    display: inline-block;
+    @include font-style($fw-800, $fs-22, 30px);
+  }
+
+  &__price--old {
+    margin-left: 5px;
+    @include font-style($fw-600, $fs-22, 28px, $color-secondary);
+  }
+
+  &__decorative-line {
+    height: 1px;
+    margin-bottom: 16px;
+    background-color: $color-elements;
+  }
+
+  &__product-description {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__subtitle {
+    @include font-style($fw-700, $fs-12, 15px, $color-secondary);
+  }
+
+  &__features {
+    @include font-style($fw-700, $fs-12, 15px);
+  }
+
+  &__description {
+    margin-bottom: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--size {
+    @include height-width(440px, 288px);
+
+    @include pad {
+      @include height-width(506px, 288px);
+    }
+
+    @media (min-width: 768px) {
+      width: 230px;
+    }
+
+    @include desktop {
+      @include height-width(506px, 272px);
+    }
+  }
+}

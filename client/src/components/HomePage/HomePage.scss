@@ -1,0 +1,69 @@
+@import '../../styles/main.scss';
+
+.title {
+  display: inline-block;
+  @include font-style($fw-800, $fs-22, 30px);
+
+  @include pad {
+    @include font-style($fw-800, $fs-32, 41px);
+  }
+}
+
+.subtitle {
+  @include font-style($fw-700, $fs-20, 25px);
+}
+
+.home {
+  &__main-title {
+    @include font-style($fw-800, $fs-32, 41px);
+    letter-spacing: -1px;
+
+    @include pad {
+      @include font-style($fw-800, $fs-48, 56px);
+    }
+  }
+
+  &__section-hero {
+    margin-bottom: 26px;
+
+    @include pad {
+      margin-bottom: 34px;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__section-models {
+    margin-bottom: 57px;
+
+    @include pad {
+      margin-bottom: 64px;
+    }
+
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__section-category {
+    margin-bottom: 57px;
+
+    @include pad {
+      margin-bottom: 64px;
+    }
+
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__section-hot-prices {
+    margin-bottom: 64px;
+
+    @include pad {
+      margin-bottom: 80px;
+    }
+  }
+}

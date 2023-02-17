@@ -1,0 +1,178 @@
+@import '../../styles/main.scss';
+
+.section-hero {
+  max-width: 1200px;
+
+  @include pad {
+    padding: 0 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    padding: 0 32px;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    margin-bottom: 18px;
+
+    @include pad {
+      height: 189px;
+    }
+
+    @include desktop {
+      height: 400px;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      padding: 0 16px;
+      margin-bottom: 24px;
+    }
+
+    @include pad {
+      padding: 0 24px;
+      margin-bottom: 32px;
+    }
+
+    @include desktop {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @include pad {
+      display: block;
+      padding: 0 16px;
+    }
+  }
+
+  &__img {
+    @include pad {
+      padding: 0 19px;
+    }
+
+    @include desktop {
+      padding: 0 16px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.home-button-slider {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.hero-swiper {
+  &__img {
+    height: 320px;
+
+    @include pad {
+      height: 230px;
+    }
+
+    @include desktop {
+      height: 402px;
+      max-width: 1040px;
+    }
+  }
+}
+
+.hero-swiper > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 35px !important;
+  z-index: 1;
+
+  @include pad {
+    bottom: 10px !important;
+  }
+}
+
+.hero-swiper-wrapper > .swiper {
+  position: static;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-swiper > .swiper-button-next {
+  display: none;
+
+  @include pad {
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 230px;
+  }
+
+  @include desktop {
+    height: 402px;
+  }
+}
+
+.hero-swiper > .swiper-button-prev {
+  display: none;
+
+  @include pad {
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 230px;
+  }
+
+  @include desktop {
+    height: 402px;
+  }
+}
+
+.product-slider .swiper {
+  position: static;
+}
+
+.hero-swiper-wrapper {
+  height: 360px;
+
+  @include pad {
+    position: relative;
+    height: 280px;
+    padding: 0 48px;
+  }
+
+  @include desktop {
+    height: 440px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px) !important;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  height: 4px;
+  width: 14px;
+  background-color: $color-elements;
+  border-radius: 0;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: $color-white;
+}

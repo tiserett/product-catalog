@@ -1,0 +1,60 @@
+@import "../../styles/main.scss";
+
+.header {
+  &__header-navigation {
+    flex-grow: 6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 24px;
+    margin-left: 30px;
+  }
+}
+
+.header-navigation {
+  &__link {
+    position: relative;
+    margin-right: 64px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @include font-style($fw-800, $fs-12, 11px, $color-secondary);
+
+    transition: color $transition-time;
+    &--active {
+      color: $color-white;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 33.5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $color-white;
+      }
+    }
+
+    @include phoneSpecial {
+      display: none;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $color-white;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 33.5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $color-white;
+      }
+    }
+    
+  }
+}

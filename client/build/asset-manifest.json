@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/anton-liada.github.io/product-catalog/static/css/main.3fa0424a.css",
+    "main.js": "/anton-liada.github.io/product-catalog/static/js/main.0e9068ff.js",
+    "static/media/logo.svg": "/anton-liada.github.io/product-catalog/static/media/logo.61c778bb493b57bf5cdd.svg",
+    "static/media/Mont-Heavy.ttf": "/anton-liada.github.io/product-catalog/static/media/Mont-Heavy.f370bce757bbfe4c8350.ttf",
+    "static/media/Mont-Regular.ttf": "/anton-liada.github.io/product-catalog/static/media/Mont-Regular.e797167c18f9897bb607.ttf",
+    "static/media/Mont-SemiBold.ttf": "/anton-liada.github.io/product-catalog/static/media/Mont-SemiBold.0b5e68ebb36ca4006e21.ttf",
+    "static/media/Mont-Bold.ttf": "/anton-liada.github.io/product-catalog/static/media/Mont-Bold.3675b597d3ffb2b75168.ttf",
+    "static/media/tablets.jpg": "/anton-liada.github.io/product-catalog/static/media/tablets.ae183cf59982c872bd36.jpg",
+    "static/media/accessories.jpg": "/anton-liada.github.io/product-catalog/static/media/accessories.5807ae38258731eabf34.jpg",
+    "static/media/phones.jpg": "/anton-liada.github.io/product-catalog/static/media/phones.806369370749250c7a62.jpg",
+    "static/media/cart.svg": "/anton-liada.github.io/product-catalog/static/media/cart.c6d6212a3ea700d6002e.svg",
+    "static/media/heart.svg": "/anton-liada.github.io/product-catalog/static/media/heart.a48831a1ed897e1e3553.svg",
+    "static/media/red-heart.svg": "/anton-liada.github.io/product-catalog/static/media/red-heart.e06f68523386b982e85a.svg",
+    "static/media/Close.svg": "/anton-liada.github.io/product-catalog/static/media/Close.a7b1ced7ed3e49385129.svg",
+    "static/media/next-page.svg": "/anton-liada.github.io/product-catalog/static/media/next-page.1218d346d7bbd8f26b9e.svg",
+    "static/media/prev-page.svg": "/anton-liada.github.io/product-catalog/static/media/prev-page.2cfdb8e7490ef908e01b.svg",
+    "static/media/up-page.svg": "/anton-liada.github.io/product-catalog/static/media/up-page.9344bb0be5d109fe52f6.svg",
+    "index.html": "/anton-liada.github.io/product-catalog/index.html",
+    "main.3fa0424a.css.map": "/anton-liada.github.io/product-catalog/static/css/main.3fa0424a.css.map",
+    "main.0e9068ff.js.map": "/anton-liada.github.io/product-catalog/static/js/main.0e9068ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fa0424a.css",
+    "static/js/main.0e9068ff.js"
+  ]
+}

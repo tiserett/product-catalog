@@ -1,0 +1,49 @@
+.grid {
+  display: grid;
+  grid-template-columns: $mobile-grid-column-width;
+  column-gap: $mobile-grid-gap;
+
+  @include pad {
+    grid-template-columns: $pad-grid-column-width;
+    column-gap: $pad-grid-gap;
+  }
+
+  @include desktop {
+    grid-template-columns: $desktop-grid-column-width;
+    column-gap: $desktop-grid-gap;
+  }
+
+  &__item {
+    @include grid-cycle(mobile, $mobile-grid-columns + 1);
+
+    @include pad {
+      @include grid-cycle(iPad, $pad-grid-columns + 1);
+    }
+
+    @include desktop {
+      @include grid-cycle(desktop, $desktop-grid-columns + 1);
+      column-gap: $desktop-grid-gap;
+    }
+  }
+
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-column-gap: $grid-column-gap;
+    grid-row-gap: $grid-row-gap;
+    align-items: stretch;
+    justify-items: center;
+
+    @include pad {
+      grid-template-columns: repeat(2, minmax(288px, 1fr));
+    }
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, minmax(272px, 1fr));
+    }
+  }
+}

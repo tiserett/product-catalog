@@ -1,0 +1,94 @@
+@import "../../styles/main.scss";
+
+
+.menu {
+  position: fixed;
+  display: block;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform $transition-time;
+  border: none;
+  
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background-color: #2A2932;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform $transition-time;
+  }
+
+  &__items {
+    margin-top: 32px;
+  }
+
+  &__link {
+    position: relative;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @include font-style($fw-800, $fs-12, 11px, $color-secondary);
+
+    transition: color $transition-time;
+
+    &:hover {
+      color: $color-white;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 33.5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $color-white;
+      }
+    }
+  }
+  &__header-bottom {
+    @include phoneSpecial {
+      display: flex;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    border: 1px solid $color-elements;
+    margin-top: 32px;
+    position: fixed;
+    bottom: 50px;
+    
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 64px;
+      border: 1px solid $color-elements;
+      margin: 0;
+
+      &:hover {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+}
+
+.menu.active {
+  transform: translateX(0);
+  border: none;
+  overflow-y: hidden;
+}

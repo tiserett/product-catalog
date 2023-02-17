@@ -1,0 +1,75 @@
+@import '../../styles/main.scss';
+
+//primary button
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 8px;
+
+  @include font-style($fw-700, $fs-14, 21px);
+  background-color: $color-accent;
+  border: none;
+  @include hover(background-color, $color-accent-2);
+
+  &-added {
+    background-color: $color-surface-2;
+  }
+
+  &:active {
+    background-color: $color-surface-2;
+  }
+
+  //secondary button
+  &__secondary {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    @include height-width(32px, 32px);
+    @include font-style($fw-600, $fs-14, 21px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color-surface-2;
+    border: 1px solid $color-surface-2;
+    @include hover(background-color, $color-icons);
+
+    &:active {
+      background-color: $color-surface-2;
+      border-color: $color-elements;
+    }
+
+    &--heart {
+      @include height-width(40px, 40px);
+      border: 1px solid transparent;
+      background-image: url('../../images/icons/heart.svg');
+
+      &-acive {
+        border-color: $color-elements;
+        background-image: url('../../images/icons/red-heart.svg');
+      }
+    }
+
+    &--next-page {
+      background-image: url('../../images/icons/next-page.svg');
+    }
+
+    &--prev-page {
+      background-image: url('../../images/icons/prev-page.svg');
+    }
+
+    &--up-page {
+      background-image: url('../../images/icons/up-page.svg');
+    }
+
+    &--num-page {
+      background-color: $color-surface-1;
+      @include hover(background-color, $color-elements);
+
+      &:active {
+        background-color: $color-accent;
+      }
+    }
+  }
+}

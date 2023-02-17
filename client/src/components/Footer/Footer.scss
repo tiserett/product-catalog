@@ -1,0 +1,89 @@
+@import '../../styles/main.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 32px;
+  border-top: 1px solid $color-elements;
+
+  @include pad {
+    flex-direction: row;
+  }
+
+  &__footer-logo {
+    flex-grow: 1;
+    padding-bottom: 32px;
+
+    @include pad {
+      padding-bottom: 0;
+    }
+  }
+
+  &__footer-navigation {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 32px;
+
+    @include pad {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+
+  &__footer-rollback {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include pad {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.footer-logo {
+  &__link {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 89px;
+    height: 32px;
+    background-image: url(../../images/icons/logo.svg);
+  }
+}
+
+.footer-navigation {
+  &__link {
+    text-decoration: none;
+    @include font-style($fw-800, $fs-12, 11px, $color:$color-white);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+      }
+
+    @include pad {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-rollback {
+  &__text {
+    text-decoration: none;
+    @include font-style($fw-700, $fs-12, 15px, $color:$color-secondary);
+    margin-right: 16px;
+  }
+}

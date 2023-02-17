@@ -1,0 +1,43 @@
+@import '../../styles/main.scss';
+
+body {
+  margin: 0;
+  background-color: $color-primary;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  background-color: $color-black;
+  border-bottom: 1px solid $color-elements;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 25px;
+  z-index: 2;
+
+  &__logo {
+    flex-grow: 1;
+  }
+}
+
+.logo {
+  margin-top: 10px;
+
+  @include phoneSpecial {
+    margin-top: 0;
+  }
+
+  &__link {
+    display: block;
+    width: 120px;
+    height: 48px;
+    background-image: url(../../images/icons/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

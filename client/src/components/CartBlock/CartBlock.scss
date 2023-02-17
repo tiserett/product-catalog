@@ -1,0 +1,193 @@
+@import '../../styles/main.scss';
+
+.cart__block{
+  margin-bottom: 56px;
+
+  @include pad {
+    margin-bottom: 64px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+
+  &-links {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &-vector {
+    @include height-width(16px, 16px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/icons/prev-page.svg);
+    margin-right: 15px;
+  }
+
+  &-link {
+    @include font-style($fw-700, $fs-12, 15px);
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-title {
+    @include font-style($fw-800, $fs-48, 56px);
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    margin-bottom: 16px;
+    background-color: $color-surface-1; 
+
+    @include phone {
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    @include pad {
+      flex-direction: row;
+    }
+
+  }
+
+  &-reset {
+    @include height-width(16px, 16px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/icons/Close.svg);
+    background-color: transparent;
+    border: none;
+
+    @include phone {
+      margin-right: 13px;
+    }
+
+    @include pad {
+      margin-right: 35px;
+    }
+  }
+
+  &-img {
+    margin-right: 20px;
+    @include height-width(66px, 66px);
+    @include hover(scale, 115%);
+    border-radius: 5px;
+  }
+
+  &-info {
+    @include font-style($fw-600, $fs-14, 21px);
+
+    @include pad {
+      width: 60%;
+    }
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &-btn-min {
+    @include height-width(32px, 32px);
+    background-color: $color-surface-1;
+    color: $color-icons;
+    border: 1px solid $color-elements;
+  }
+
+  &-count {
+    @include height-width(32px, 32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font-style($fw-600, $fs-14, 21px);
+  }
+
+  &-buttons {
+    display: flex;
+  }
+
+  &-btn-plus {
+    @include height-width(32px, 32px);
+    background-color: $color-surface-2;
+    color: $color-white;
+    border: none;
+  }
+
+  &-price {
+    @include font-style($fw-800, $fs-22, 140%);
+  }
+
+  &-total {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    text-align: center;
+    padding: 24px;
+    border: 1px solid $color-elements;
+
+    &-title {
+      @include font-style($fw-800, $fs-32, 41px);
+    }
+
+    &-subtitle {
+      @include font-style($fw-600, $fs-14, 21px, $color-secondary);
+      padding-bottom: 25px;
+      border-bottom: 1px solid $color-elements;
+    }
+
+
+    &-button {
+      @include height-width(48px, 100%);
+      @include font-style($fw-700, $fs-14, 21px);
+      background-color: $color-accent;
+      margin-top: 25px;
+      border: none;
+    }
+  }
+
+  &-group-1 {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    @include phone{
+      width: 100%;
+      margin-bottom: 23px;
+    }
+  
+    @include pad {
+      width: 60%;
+      margin-bottom: 0;
+    }
+  }
+
+  &-group-2 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    @include phone{
+      width: 100%;
+    }
+  
+    @include pad {
+      width: 35%;
+    }
+  }
+
+  &-mobile-center {
+    display: flex;
+    align-items: center;
+  }
+}

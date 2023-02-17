@@ -1,0 +1,29 @@
+@import '../../../styles/main.scss';
+
+#dialog-title {
+  @include font-style($fw-600, $fs-20, 20px, $color-black);
+  background-color: $color-white;
+}
+
+#dialog-content {
+  padding-top: 20px;
+}
+
+#dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 24px;
+  @include font-style($fw-600, $fs-16, 16px, $color-black);
+  background-color: $color-white;
+
+  &__link {
+    display: flex;
+    @include height-width(48px, 200px);
+    @include font-style($fw-700, $fs-14, 21px);
+    background-color: $color-accent;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

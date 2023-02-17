@@ -1,0 +1,64 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} $transition-time;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin height-width ($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin phoneSpecial {
+  @media (max-width: $burger-media-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $pad-media-width - 1) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: $mobile-media-width) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (min-width: $pad-media-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-media-width) {
+    @content;
+  }
+}
+
+@mixin container($size) {
+  padding-left: ($size);
+  padding-right: ($size);
+}
+
+@mixin grid-cycle($screen, $columns) {
+  @for $start from 1 through $columns {
+    @for $end from $start to $columns {
+      &--#{$screen}-#{$start}-#{$end} {
+        grid-column: #{$start} / #{$end + 1};
+      }
+    }
+  }
+}
+
+@mixin font-style($weight, $size, $height, $color:$color-white) {
+  font-family: $ff-mont;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
