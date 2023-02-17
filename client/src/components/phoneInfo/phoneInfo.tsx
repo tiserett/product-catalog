@@ -35,7 +35,7 @@ export const PhoneInfo: React.FC<Props> = ({
   const [imageCart, setImageCart] = useState(foundPhone?.images);
   const navigate = useNavigate();
 
-  const baseUrl = 'http://localhost:8080/products';
+  const baseUrl = 'https://product-catalog-vr26.onrender.com/products';
 
   useEffect(() => {
     const loadData = async () => {

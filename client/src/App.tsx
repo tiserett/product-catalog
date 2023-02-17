@@ -11,7 +11,7 @@ export const App = () => {
   useEffect(() => {
     const loadPhones = async () => {
       const response = await axios.get(
-        'https://product-server.onrender.com/products',
+        'https://product-catalog-vr26.onrender.com/products',
       );
 
       const data = await response.data;

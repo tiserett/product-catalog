@@ -30,7 +30,7 @@ export const HomePage: React.FC<Props> = ({
   const [cheapModels, setCheapModels] = useState<Phone[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const baseUrl = 'https://product-server.onrender.com/products';
+  const baseUrl = 'https://product-catalog-vr26.onrender.com/products';
 
   useEffect(() => {
     const loadData = async () => {
