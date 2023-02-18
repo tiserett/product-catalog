@@ -1,7 +1,7 @@
 # Gadgets shop
 
 Link to the [Page](https://tiserett.github.io/product-catalog/)\
-Server side deployed via [Render](https://render.com/) (might take some time to fetch data)\
+Server side deployed via [Render](https://render.com/) (might take some time to load data)\
 Client side deployed via [GitHub Pages](https://pages.github.com)
 
 <hr />
